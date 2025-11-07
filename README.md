@@ -41,6 +41,8 @@ Descargar datos del Human Rights Data Analysis Group (HRDAG) con IPFS:
 
 Ambas versiones de los datos corresponden a 100 réplicas para cada violación, los cuales fueron producto del proceso de imputación estadística múltiple de campos faltantes (ver sección 4 del [informe metodológico del proyecto](https://hrdag.org/CEV-JEP/20250306-methodological-report-ES.pdf)). Además, el repositorio [`verdata-examples`](https://github.com/HRDAG/verdata-examples) contiene ejemplos que ilustran cómo usar correctamente estos datos (réplicas) a través del paquete previamente mencionado.
 
+En los archivos de datos, cada fila representa una víctima única. La columna `match_group_id` contiene el identificador único para cada víctima. Una persona puede ser víctima de un solo hecho victimizante o de dos hechos victimizantes: homicidio y desaparición, homicidio y reclutamiento o homicidio y secuestro. Se puede usar la columna `match_group_id` con los archivos de interés para identificar víctimas de dos hechos victimizantes. Ver sección 3.6.1 del [informe metodológico del proyecto](https://hrdag.org/CEV-JEP/20250306-methodological-report-ES.pdf) para más información sobre el caso de múltiples hechos victimizantes.
+
 <div class="column" width="60%">
 
 </div>
@@ -49,7 +51,13 @@ Ambas versiones de los datos corresponden a 100 réplicas para cada violación, 
 
 ## Instalación
 
-Se puede instalar la versión en desarrollo de `verdata` desde GitHub así:
+Se puede instalar `verdata` directamente de [CRAN](https://cran.r-project.org/) con:
+
+```r
+install.packages("verdata")
+```
+
+También se puede instalar la versión en desarrollo de `verdata` desde GitHub así:
 
 ```r
 if (!require("devtools")) {install.packages("devtools")}
@@ -85,11 +93,11 @@ Para el uso de este paquete es necesario haber descargado previamente los datos 
 
 ### Datos estimados:
 
-* La función `estimates_exist` permite validar si la estimación de los estratos de interés ya existen, y se encuentran en los archivos de estimaciones precalculadas publicados, que deben haber sido previamente descargados del [sitio de la Comisión](https://www.comisiondelaverdad.co/analitica-de-datos-informacion-y-recursos#c3). Esta función requiere los datos estratificados y el directorio en el que se encuentran las estimaciones precalculadas y devolverá un valor lógico que indica si la estimación existe o no, y la ruta en la que se encuentra, en caso de que exista. En caso de que usted quiera replicar los resultados de la Comisión de la Verdad, los objetos de datos `estratificacion` (en español) y `stratification` (en inglés) especifican qué estratificaciones se usaron para cada estimación presente en el [informe metodológico del proyecto](https://hrdag.org/wp-content/uploads/2022/08/20220818-fase4-informe-corrected.pdf).
+* La función `estimates_exist` permite validar si la estimación de los estratos de interés ya existen, y se encuentran en los archivos de estimaciones precalculadas publicados, que deben haber sido previamente descargados del [sitio de la Comisión](https://www.comisiondelaverdad.co/analitica-de-datos-informacion-y-recursos#c3). Esta función requiere los datos estratificados y el directorio en el que se encuentran las estimaciones precalculadas y devolverá un valor lógico que indica si la estimación existe o no, y la ruta en la que se encuentra, en caso de que exista. En caso de que usted quiera replicar los resultados de la Comisión de la Verdad, los objetos de datos `estratificacion` (en español) y `stratification` (en inglés) especifican qué estratificaciones se usaron para cada estimación presente en el [informe metodológico del proyecto](https://hrdag.org/CEV-JEP/20250306-methodological-report-ES.pdf).
 
-* La función `mse` permite hacer estimaciones del subregistro, usando el modelo de [LCMCR](https://onlinelibrary.wiley.com/doi/10.1111/biom.12502) (ver sección 6 del [informe metodológico del proyecto](https://hrdag.org/wp-content/uploads/2022/08/20220818-fase4-informe-corrected.pdf)).
+* La función `mse` permite hacer estimaciones del subregistro, usando el modelo de [LCMCR](https://onlinelibrary.wiley.com/doi/10.1111/biom.12502) (ver sección 6 del [informe metodológico del proyecto](https://hrdag.org/CEV-JEP/20250306-methodological-report-ES.pdf)).
 Para usar esta función es necesario haber definido variables de estratificación, es decir, agrupación, para hacer la estimación
-y haber hecho la estratificación (ver ejemplo y sección 8.4.2 del [informe metodológico del proyecto](https://hrdag.org/wp-content/uploads/2022/08/20220818-fase4-informe-corrected.pdf)).
+y haber hecho la estratificación (ver ejemplo y sección 8.4.2 del [informe metodológico del proyecto](https://hrdag.org/CEV-JEP/20250306-methodological-report-ES.pdf)).
 Además, considerando que la estimación requiere de tiempo y recursos computacionales, en caso de querer hacer uso de las
 estimaciones ya calculadas por el equipo, es necesario haberlas descargado del [sitio de la Comisión](https://www.comisiondelaverdad.co/analitica-de-datos-informacion-y-recursos#c3) a su máquina local. Esta función requiere como insumo
 los datos ya estratificados y el directorio en el que se encuentran las estimaciones publicadas -en caso de querer hacer uso

@@ -1,6 +1,6 @@
-33a26be8f337f911cb6398d25ba7066e *DESCRIPTION
+9118e0ced05d3add7f4462d8c85ebf5f *DESCRIPTION
 63ae17ade8a8d284bdd85a4ba04a8f25 *NAMESPACE
-443a814ced8923625bb9f5a2ffa4d082 *NEWS.md
+8d4e6975e8dfdd7b0cc107f2295c2e3f *NEWS.md
 4603f8f15e5c575ca73973a77824eebd *R/calculate_hashes.R
 6ebbd2c3b570b427e2f38d0a088419a4 *R/combine_estimates.R
 bf127c774e5dcbed0d41c71b54af7c8a *R/combine_replicates.R
@@ -17,15 +17,15 @@ f7b1a2b22121215c669bd45a803d9c6a *R/summary_observed.R
 3ed722ecd2291c598ab4ede298f3a37e *R/sysdata.rda
 b56ff2b193ecba52f9ec7f3b10cca008 *R/utils-pipe.R
 159634f28c289922feba3fe95e09645d *R/utils_authentication.R
-c2a2a88beaf59dac5b46aaa213175abb *README.md
-77b5b5dbe8fc7eeac0548b3f21e45195 *build/partial.rdb
+d2c25f965c254e86c3e554e38f54ec28 *README.md
+7cbfdb27fddc9a1c514ea6ddc96d7959 *build/partial.rdb
 1060f86a0adae59a49dd03fb22c83fea *data/diccionario_replicas.rda
 8d35007ff04091eb1ff00dcc2197f1ed *data/diccionario_vars_adicional.rda
 cdc1adeb95745c84a94a18d94633b2c1 *data/estratificacion.rda
 4c76ba12f4bdbb68dacb9f9a978b77bb *data/stratification.rda
 a46509d07d97ba4681430d0d46b0d3df *inst/REFERENCES.bib
-1dd3b9a5c6a9bcb290444a66dc5cb316 *inst/WORDLIST
-ee2575a0f2459785df11c2d133b1e143 *inst/docs/README-en.md
+9a80768c97c6bd9bae5186822b2d702c *inst/WORDLIST
+65056462cf71555a518c902a424c1e21 *inst/docs/README-en.md
 3b33aa9159e289fbf46f0c1cbc846f0a *inst/docs/diccionario-variables-replicas.xlsx
 67cb8935fe20154949314f66b0f89802 *inst/extdata/estimates/11/1122e37172ef875c7272fd11b679739eb1e7e485.json
 019321264ec9c0d5c29df87b10467db4 *inst/extdata/estimates/17/1762abe42f1b9eaa80b09d6acb936235df1bbd16.json
@@ -77,7 +77,7 @@ a86cfa05abad1e91f3ec2927a45af689 *man/run_lcmcr.Rd
 5adb47e53aed84146cc1c1e63beb0860 *tests/testthat/test-combine_estimates.R
 bd0571aa213afb5d86d90f8eae82becb *tests/testthat/test-combine_replicates.R
 68bec286f0162e1132cfbb4ba6cde25d *tests/testthat/test-confirm_files.R
-46fdd6e098e96714bf804bfce287f21a *tests/testthat/test-estimate_mse.R
+abeea8fdbbb7a7b84676e95fed02e274 *tests/testthat/test-estimate_mse.R
 0f908bfc12d0d1eb7dbf350898f1e615 *tests/testthat/test-filter_standard_cev.R
 508a9ab89392500ecd40d84fe11d47f5 *tests/testthat/test-lookup_estimates.R
 627e26f92d5e6c4a30d43dc5f410b9c7 *tests/testthat/test-read_replicates.R
